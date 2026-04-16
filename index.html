@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nitrogen Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <div class="logo">NITROGEN</div>
+            <div class="servers">
+                <div class="server active" data-id="general">
+                    <span>#</span> General
+                </div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="header">
+                <h2>#general</h2>
+                <div class="status">🟢 Online</div>
+            </div>
+            
+            <div id="messages" class="messages"></div>
+            
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Escribe un mensaje...">
+                <button id="sendBtn">➤</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
