@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Whitney', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #202225 0%, #2f3136 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #36393f;
+    padding: 20px;
+    border-right: 1px solid #202225;
+}
+
+.logo {
+    color: #7289da;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.server {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.server:hover {
+    background: rgba(79,84,92,0.3);
+}
+
+.server.active {
+    background: #7289da;
+    color: white;
+}
+
+.server span {
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px 30px;
+    background: #36393f;
+    border-bottom: 1px solid #202225;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    font-size: 12px;
+    color: #43b581;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+    background: #36393f;
+}
+
+.message {
+    margin-bottom: 16px;
+    animation: fadeIn 0.3s;
+}
+
+.message-author {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.message-time {
+    color: #72767d;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.message-content {
+    color: #dcddde;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.input-area {
+    padding: 20px 30px;
+    background: #40444b;
+    display: flex;
+    gap: 12px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #484d52;
+    color: #dcddde;
+    font-size: 16px;
+}
+
+#messageInput:focus {
+    outline: none;
+    background: #585e67;
+}
+
+#sendBtn {
+    padding: 12px 20px;
+    background: #7289da;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#sendBtn:hover {
+    background: #677bc4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
